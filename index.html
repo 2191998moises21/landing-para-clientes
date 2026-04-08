@@ -75,10 +75,8 @@ h1 em{font-style:italic;color:var(--blue-600)}
 /* MARQUEE */
 .marquee-wrap{padding:2.5rem 0;border-top:1px solid var(--grey-200);border-bottom:1px solid var(--grey-200);overflow:hidden;background:var(--white)}
 .marquee-label{text-align:center;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--grey-500);margin-bottom:1.4rem;font-weight:500}
-.marquee{display:flex;overflow:hidden;gap:0}
+.marquee{display:flex;overflow:hidden}
 .marquee-inner{display:flex;animation:marquee 28s linear infinite;width:max-content}
-.marquee-track{display:flex;animation:marquee 22s linear infinite;gap:0}
-.marquee-track:nth-child(2){animation-delay:-11s}
 @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 .tech-item{display:flex;align-items:center;gap:.55rem;padding:.5rem 1.8rem;white-space:nowrap;font-size:.88rem;font-weight:600;color:var(--grey-600);border-right:1px solid var(--grey-200)}
 .tech-item span{font-size:1.1rem}
@@ -315,7 +313,7 @@ footer{background:var(--white);border-top:1px solid var(--grey-200);padding:2.5r
 <div class="marquee-wrap">
   <p class="marquee-label">Technologies we work with</p>
   <div class="marquee">
-    <div class="marquee-track">
+    <div class="marquee-inner">
       <div class="tech-item"><span>⚡</span>WordPress</div>
       <div class="tech-item"><span>🛒</span>Shopify</div>
       <div class="tech-item"><span>⚛️</span>React</div>
@@ -325,17 +323,16 @@ footer{background:var(--white);border-top:1px solid var(--grey-200);padding:2.5r
       <div class="tech-item"><span>🔍</span>Analytics</div>
       <div class="tech-item"><span>🛠️</span>WooCommerce</div>
       <div class="tech-item"><span>✉️</span>Mailchimp</div>
-    </div>
-    <div class="marquee-track" aria-hidden="true">
-      <div class="tech-item"><span>⚡</span>WordPress</div>
-      <div class="tech-item"><span>🛒</span>Shopify</div>
-      <div class="tech-item"><span>⚛️</span>React</div>
-      <div class="tech-item"><span>📈</span>Google SEO</div>
-      <div class="tech-item"><span>🎨</span>Elementor</div>
-      <div class="tech-item"><span>📊</span>Search Console</div>
-      <div class="tech-item"><span>🔍</span>Analytics</div>
-      <div class="tech-item"><span>🛠️</span>WooCommerce</div>
-      <div class="tech-item"><span>✉️</span>Mailchimp</div>
+      <!-- duplicate for seamless loop -->
+      <div class="tech-item" aria-hidden="true"><span>⚡</span>WordPress</div>
+      <div class="tech-item" aria-hidden="true"><span>🛒</span>Shopify</div>
+      <div class="tech-item" aria-hidden="true"><span>⚛️</span>React</div>
+      <div class="tech-item" aria-hidden="true"><span>📈</span>Google SEO</div>
+      <div class="tech-item" aria-hidden="true"><span>🎨</span>Elementor</div>
+      <div class="tech-item" aria-hidden="true"><span>📊</span>Search Console</div>
+      <div class="tech-item" aria-hidden="true"><span>🔍</span>Analytics</div>
+      <div class="tech-item" aria-hidden="true"><span>🛠️</span>WooCommerce</div>
+      <div class="tech-item" aria-hidden="true"><span>✉️</span>Mailchimp</div>
     </div>
   </div>
 </div>
